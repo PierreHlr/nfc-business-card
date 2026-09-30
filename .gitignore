@@ -1,0 +1,11 @@
+# KiCad: local history (contains its own git repository), backups, locks, per-user settings
+.history/
+*-backups/
+*.lck
+*.bak
+*.kicad_prl
+fp-info-cache
+
+# Python
+__pycache__/
+*.pyc
