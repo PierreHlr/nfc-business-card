@@ -177,7 +177,7 @@ Neumann formula exactly:
 
 $$
 M = \frac{\mu_0}{4\pi}\Big[g(b_1-a_2) - g(a_1-a_2) - g(b_1-b_2) + g(a_1-b_2)\Big],
-\qquad g(u) = u \operatorname{asinh}\frac{u}{d} - \sqrt{u^2+d^2}
+\qquad g(u) = u \mathrm{asinh}\frac{u}{d} - \sqrt{u^2+d^2}
 $$
 
 The self-inductance of a segment uses the same expression, with $d$ replaced by
