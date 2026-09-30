@@ -60,7 +60,7 @@ For a uniform, sinusoidal magnetic field $H$ perpendicular to the card, the
 electromotive force induced in a coil of $N$ turns is
 
 $$
-e_{\mathrm{rms}} = \omega\,\mu_0\,H_{\mathrm{rms}} \sum_{k=1}^{N} A_k
+e_{\mathrm{rms}} = \omega \mu_0 H_{\mathrm{rms}} \sum_{k=1}^{N} A_k
 $$
 
 where $A_k$ is the area enclosed by turn $k$. For the antenna of this card
@@ -90,7 +90,7 @@ capacitance. Maximum voltage reaches the chip when the circuit resonates at
 the carrier frequency:
 
 $$
-f_0 = \frac{1}{2\pi\sqrt{L\,C_{\mathrm{tot}}}}, \qquad
+f_0 = \frac{1}{2\pi\sqrt{L C_{\mathrm{tot}}}}, \qquad
 C_{\mathrm{tot}} = C_i + C_{\mathrm{par}} + C_{\mathrm{tune}}
 $$
 
@@ -101,7 +101,7 @@ $$
 Solving for the inductance that resonates at 13.56 MHz:
 
 $$
-L = \frac{1}{(2\pi f_0)^2\,C_{\mathrm{tot}}}
+L = \frac{1}{(2\pi f_0)^2 C_{\mathrm{tot}}}
 \quad\Rightarrow\quad
 L = 2.76\ \mu\text{H (chip alone)}, \quad 2.60\ \mu\text{H (chip + 3 pF of parasitics)}
 $$
@@ -163,7 +163,7 @@ sum of every segment's partial self-inductance and of the partial mutual
 inductance of every pair of segments:
 
 $$
-L = \sum_i L_i + \sum_{i \ne j} \sigma_{ij}\, M_{ij}
+L = \sum_i L_i + \sum_{i \ne j} \sigma_{ij}  M_{ij}
 $$
 
 * Perpendicular segments have zero mutual inductance.
@@ -177,12 +177,12 @@ Neumann formula exactly:
 
 $$
 M = \frac{\mu_0}{4\pi}\Big[g(b_1-a_2) - g(a_1-a_2) - g(b_1-b_2) + g(a_1-b_2)\Big],
-\qquad g(u) = u\,\operatorname{asinh}\frac{u}{d} - \sqrt{u^2+d^2}
+\qquad g(u) = u \operatorname{asinh}\frac{u}{d} - \sqrt{u^2+d^2}
 $$
 
 The self-inductance of a segment uses the same expression, with $d$ replaced by
 the geometric mean distance of the rectangular cross-section to itself,
-$\mathrm{GMD} \approx 0.2235\,(w+t)$.
+$\mathrm{GMD} \approx 0.2235 (w+t)$.
 
 **Validation.** On a 50 mm square loop made of a 0.5 mm trace, the code gives
 **210.6 nH**, against **210.5 nH** for the closed-form square-loop formula
@@ -198,9 +198,9 @@ L = \frac{\mu_0}{\pi}\left[x_1 + x_2 - x_3 + x_4\right] N^{p}, \qquad p = 1.8
 $$
 
 $$
-x_1 = a\ln\frac{2ab}{d\,(a+c)},\quad
-x_2 = b\ln\frac{2ab}{d\,(b+c)},\quad
-x_3 = 2\,(a+b-c),\quad
+x_1 = a\ln\frac{2ab}{d (a+c)},\quad
+x_2 = b\ln\frac{2ab}{d (b+c)},\quad
+x_3 = 2 (a+b-c),\quad
 x_4 = \frac{a+b}{4}
 $$
 
@@ -231,7 +231,7 @@ Adjacent turns form coplanar strips. Their capacitance per unit length follows
 from conformal mapping:
 
 $$
-C' = \varepsilon_0\,\varepsilon_{\mathrm{eff}}\,\frac{K(k')}{K(k)},
+C' = \varepsilon_0 \varepsilon_{\mathrm{eff}} \frac{K(k')}{K(k)},
 \qquad k = \frac{s}{s+2w},\quad k' = \sqrt{1-k^2},\quad
 \varepsilon_{\mathrm{eff}} \approx \frac{1+\varepsilon_r}{2}
 $$
@@ -245,12 +245,12 @@ distributed linearly along the spiral, adjacent turns differ by $V/N$. Equating
 stored energies,
 
 $$
-\tfrac12\,C'\,\ell_{\mathrm{adj}}\left(\frac{V}{N}\right)^2 = \tfrac12\,C_{\mathrm{par}}\,V^2
+\tfrac12 C' \ell_{\mathrm{adj}}\left(\frac{V}{N}\right)^2 = \tfrac12 C_{\mathrm{par}} V^2
 \quad\Rightarrow\quad
-C_{\mathrm{par}} = \frac{C'\,\ell_{\mathrm{adj}}}{N^2}
+C_{\mathrm{par}} = \frac{C' \ell_{\mathrm{adj}}}{N^2}
 $$
 
-with $\ell_{\mathrm{adj}} \approx \ell\,(N-1)/N$ the length over which two
+with $\ell_{\mathrm{adj}} \approx \ell (N-1)/N$ the length over which two
 turns run side by side. This gives **2.0 pF**. Adding about **0.5 pF** for the
 pads, the tuning-capacitor footprints and the short tracks brings it to
 $C_{\mathrm{par}} \approx 2.5\ \text{pF}$, small compared with the chip's 50 pF.
@@ -260,7 +260,7 @@ $C_{\mathrm{par}} \approx 2.5\ \text{pF}$, small compared with the chip's 50 pF.
 With $L = 2.24\ \mu\text{H}$ and $C_{\mathrm{tot}} = 50 + 2.5 = 52.5\ \text{pF}$:
 
 $$
-f_0 = \frac{1}{2\pi\sqrt{2.24\,\mu\text{H} \times 52.5\ \text{pF}}} \approx \mathbf{14.7\ MHz}
+f_0 = \frac{1}{2\pi\sqrt{2.24 \mu\text{H} \times 52.5\ \text{pF}}} \approx \mathbf{14.7\ MHz}
 $$
 
 **Sensitivity.** Since $f_0 \propto (LC)^{-1/2}$, a relative error $\varepsilon$
@@ -302,11 +302,11 @@ $$
 
 about half of the 35 µm copper thickness. The current therefore uses both faces
 of the trace, with an effective thickness
-$t_{\mathrm{eff}} = 2\delta\,(1 - e^{-t/2\delta}) \approx 22\ \mu\text{m}$:
+$t_{\mathrm{eff}} = 2\delta (1 - e^{-t/2\delta}) \approx 22\ \mu\text{m}$:
 
 | Quantity | Value |
 |---|---|
-| DC resistance $R_{dc} = \rho\,\ell / (w\,t)$ | 0.46 Ω |
+| DC resistance $R_{dc} = \rho \ell / (w t)$ | 0.46 Ω |
 | AC resistance (skin effect only) | 0.72 Ω |
 | Unloaded quality factor $Q = \omega L / R_{ac}$ | ≈ 265 |
 

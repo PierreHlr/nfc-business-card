@@ -41,7 +41,7 @@ The card antenna and the chip's 50 pF input capacitance form a **parallel LC
 resonator**. Its resonance frequency must sit close to the carrier:
 
 $$
-f_0 = \frac{1}{2\pi\sqrt{L\,(C_i + C_{\mathrm{par}} + C_{\mathrm{tune}})}}
+f_0 = \frac{1}{2\pi\sqrt{L (C_i + C_{\mathrm{par}} + C_{\mathrm{tune}})}}
 $$
 
 Without a network analyser to measure it, the design relies on calculation,
